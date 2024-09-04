@@ -1,0 +1,21 @@
+<form [formGroup]="productForm" (ngSubmit)="addProduct()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="productForm.get('name')?.hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description">
+      <mat-error *ngIf="productForm.get('description')?.hasError('required')">Description is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Image URL</mat-label>
+      <input matInput formControlName="imageUrl">
+      <mat-error *ngIf="productForm.get('imageUrl')?.hasError('required')">Image URL is required</mat-error>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Add Product</button>
+  </form>

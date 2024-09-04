@@ -1,0 +1,16 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .product-card {
+    width: 200px;
+  }
+  
+  mat-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
